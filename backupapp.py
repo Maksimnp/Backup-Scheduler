@@ -39,9 +39,8 @@ def is_admin():
     except:
         return False
 
-# Функция для очистки имени папки от временных штампов (упрощена)
+# Функция для очистки имени папки от временных штампов
 def clean_destination_folder(destination):
-    # Просто приводим путь к стандартному виду с обратными слэшами
     destination = destination.replace('/', '\\')
     return destination
 
@@ -415,7 +414,7 @@ def update_task_list():
         date_entry.entry.insert(0, datetime.datetime.now().strftime("%m/%d/%y"))
         var_frequency.set("Ежедневно")
 
-# Создание GUI с дизайном в стиле macOS через ttkbootstrap
+# Создание GUI
 root = ttk.Window(themename="flatly")
 root.title("Настройка резервного копирования")
 root.geometry("450x750")
